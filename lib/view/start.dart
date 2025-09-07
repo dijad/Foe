@@ -11,15 +11,15 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  Game _game;
-  int _numTeams = 2, _numWords = 30, _roundTime = 30, _currentValue;
+  Game? _game;
+  int _numTeams = 2, _numWords = 30, _roundTime = 30, _currentValue = 2;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          brightness: Brightness.light,
+          systemOverlayStyle: SystemUiOverlayStyle.light,
           backgroundColor: Colors.pink,
           leading: IconButton(
               onPressed: () {

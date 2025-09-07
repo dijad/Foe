@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:Foe/animation/FadeAnimation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:Foe/view/start.dart';
@@ -8,7 +9,7 @@ class InstructionsSettings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        brightness: Brightness.light,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
         backgroundColor: Colors.pink,
         title: Text("Instrucciones"),
         centerTitle: true,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:Foe/animation/FadeAnimation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:Foe/view/game.dart';
@@ -6,16 +7,15 @@ import 'package:Foe/backend/game.dart';
 
 // ignore: must_be_immutable
 class InstructionsThird extends StatelessWidget {
-  Game game;
+  final Game game;
 
-  InstructionsThird(Game game) {
-    this.game = game;
-  }
+  InstructionsThird(this.game);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        brightness: Brightness.light,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
         backgroundColor: Colors.pink,
         title: Text("Instrucciones"),
         centerTitle: true,
