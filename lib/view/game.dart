@@ -16,10 +16,10 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
-  AudioPlayer player;
-  CountDownController _controller;
-  int _duration;
-  String _currentWord;
+  late AudioPlayer player;
+  late CountDownController _controller;
+  int _duration = 0;
+  String _currentWord = '';
 
   @override
   void initState() {
@@ -27,7 +27,7 @@ class _GamePageState extends State<GamePage> {
     player = AudioPlayer();
     _controller = CountDownController();
     _duration = 0;
-    _currentWord = widget.game.setWords[0];
+    _currentWord = widget.game.setWords.isNotEmpty ? widget.game.setWords[0] : '';
   }
 
   @override

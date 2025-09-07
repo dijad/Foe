@@ -74,7 +74,7 @@ class Utilities {
   getWordsSet(int numberWords) {
     int aux;
     while (set.length < numberWords) {
-      aux = rand.nextInt(numberWords);
+      aux = rand.nextInt(totalWords.length);
       String word = totalWords[aux];
       if (!isWord(word)) {
         set.add(word);
