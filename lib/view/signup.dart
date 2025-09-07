@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:Foe/view/login.dart';
 import 'package:Foe/animation/FadeAnimation.dart';
 
@@ -10,7 +11,7 @@ class SignupPage extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0,
-          brightness: Brightness.light,
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
           backgroundColor: Colors.white,
           leading: IconButton(
               onPressed: () {

@@ -72,6 +72,7 @@ class Utilities {
   List<String> set = [];
 
   getWordsSet(int numberWords) {
+    set.clear(); // Clear the set before generating new words
     int aux;
     while (set.length < numberWords) {
       aux = rand.nextInt(totalWords.length);

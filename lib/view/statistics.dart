@@ -17,8 +17,8 @@ class StatisticsPage extends StatefulWidget {
 }
 
 class _StatisticsPageState extends State<StatisticsPage> {
-  Game game;
-  String textButton;
+  late Game game;
+  String textButton = '';
   @override
   void initState() {
     super.initState();
@@ -66,7 +66,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                     height: MediaQuery.of(context).size.height / 1.5,
                     child: ListView(
                         children: creatTablesStats(
-                            this.game.firstTeam, MediaQuery.of(context).size))),
+                            game.firstTeam, MediaQuery.of(context).size))),
               )),
           SizedBox(height: 25),
           FadeAnimation(
@@ -297,9 +297,9 @@ class _StatisticsPageState extends State<StatisticsPage> {
     ]);
   }
 
-  List<Widget> creatTablesStats(Team firstTeam, widhtTable) {
-    final list = List<Widget>();
-    Team aux = firstTeam;
+  List<Widget> creatTablesStats(Team? firstTeam, widhtTable) {
+    final list = <Widget>[];
+    Team? aux = firstTeam;
     while (aux != null) {
       list.add(makeTableTeam(widhtTable: widhtTable, team: aux));
       aux = aux.nextTeam;

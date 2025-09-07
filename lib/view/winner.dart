@@ -6,10 +6,8 @@ import 'package:just_audio/just_audio.dart';
 
 // ignore: must_be_immutable
 class WinnerPage extends StatelessWidget {
-  Team winner;
-  WinnerPage(Team team) {
-    this.winner = team;
-  }
+  final Team winner;
+  WinnerPage(this.winner);
   AudioPlayer player = AudioPlayer();
 
   @override
